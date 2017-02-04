@@ -1,0 +1,42 @@
+<div class="ko-input-box" data-bind="visible: visible, css: {'ko-focus': focus, 'ko-large': size() == 'large', 'ko-small': size() == 'small', 'ko-disable': disable}">
+    <!--ko if: leftListener-->
+    <div class="ko-input-prepend" data-bind="koxUpdateInputMargin: leftListener, inputMargin: marginLeft, click: left_label_click">
+        <!--ko if: left_icon-->
+        <!--ko if: left_icon() == 'loading'-->
+        <ko-loader params="size: size, reverse: true"></ko-loader>
+        <!--/ko-->
+        <!--ko ifnot: left_icon() == 'loading'-->
+        <ko-icon params="type: left_icon, size: size"></ko-icon>
+        <!--/ko-->
+        <!--/ko-->
+        <!--ko if: left_label-->
+        <span class="ko-label-left" data-bind="text: left_label"></span>
+        <!--/ko-->
+    </div>
+    <!--/ko-->
+
+    <div class="ko-input-wrapper" data-bind="css: {'ko-left-icon': left_icon, 'ko-right-icon': right_icon}, style: {'margin-left': marginLeft, 'margin-right': marginRight}">
+        <!--ko if: type() == 'text'-->
+        <input type="text" class="ko-input" data-bind="hasFocus: focus, textInput: value, attr: {placeholder: placeholder}, disable: disable" />
+        <!--/ko-->
+        <!--ko if: type() == 'password'-->
+        <input type="password" class="ko-input" data-bind="hasFocus: focus, textInput: value, attr: {placeholder: placeholder}, disable: disable" />
+        <!--/ko-->
+    </div>
+
+    <!--ko if: rightListener-->
+    <div class="ko-input-append" data-bind="koxUpdateInputMargin: rightListener, inputMargin: marginRight, click: right_label_click">
+        <!--ko if: right_label-->
+        <span class="ko-label-right" data-bind="text: right_label"></span>
+        <!--/ko-->
+        <!--ko if: right_icon-->
+        <!--ko if: right_icon() == 'loading'-->
+        <ko-loader params="size: size, reverse: true"></ko-loader>
+        <!--/ko-->
+        <!--ko ifnot: right_icon() == 'loading'-->
+        <ko-icon params="type: right_icon, size: size"></ko-icon>
+        <!--/ko-->
+        <!--/ko-->
+    </div>
+    <!--/ko-->
+</div>

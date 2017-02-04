@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../dist/kox.css" />
+    <link rel="stylesheet" href="test.css" />
+
+    <script type="text/javascript" src="../dist/knockout-3.4.1.debug.js"></script>
+    <script type="text/javascript" src="../dist/kox.min.js"></script>
+</head>
+<body>
+    <div class="ko-ui ko-block">
+        <input type="checkbox" data-bind="checked: active" />
+        <button data-bind="toggle: active">Toggle</button>
+    </div>
+
+    <div class="ko-ui ko-block">
+        <input type="text" data-bind="textInput: data">
+    </div>
+
+    <div class="ko-ui ko-block test-layout">
+        <ko-row>
+            <ko-col params="size: 8">col-8</ko-col>
+            <ko-col params="size: 8">col-8</ko-col>
+            <ko-col params="size: 8">col-8</ko-col>
+        </ko-row>
+        <ko-row>
+            <ko-col params="size: 6">col-6</ko-col>
+            <ko-col params="size: 6">col-6</ko-col>
+            <ko-col params="size: 6">col-6</ko-col>
+            <ko-col params="size: 6">col-6</ko-col>
+        </ko-row>
+        <ko-row params="gutter: 16">
+            <ko-col params="size: 6">col-6</ko-col>
+            <ko-col params="size: 6">col-6</ko-col>
+            <ko-col params="size: 6">col-6</ko-col>
+            <ko-col params="size: 6">col-6</ko-col>
+        </ko-row>
+        <ko-row>
+            <ko-col params="size: 18, push: 6">col-18 | push-6</ko-col>
+            <ko-col params="size: 6, pull: 18">col-6 | pull-18</ko-col>
+        </ko-row>
+        <ko-row>
+            <ko-col params="size: 8">col-8</ko-col>
+            <ko-col params="size: 8, offset: 8">col-8 | offset-8</ko-col>
+        </ko-row>
+        <ko-row>
+            <ko-col col params="size: 2, mdSize: 6, smSize: 4, lgSize: 8">Col</ko-col>
+            <ko-col col params="size: 20, mdSize: 12, smSize: 16, lgSize: 8">Col</ko-col>
+            <ko-col col params="size: 2, mdSize: 6, smSize: 4, lgSize: 8">Col</ko-col>
+        </ko-row>
+    </div>
+
+    <div class="ko-ui ko-block">
+        <ko-icon params="type: 'search', color: 'warning', size: 'large'"></ko-icon>
+        <ko-icon params="type: 'locked', color: 'info'"></ko-icon>
+        <ko-icon params="type: 'unlocked', color: 'success'"></ko-icon>
+    </div>
+
+    <div class="ko-ui ko-block">
+        <ko-loader params="reverse: true, visible: active"></ko-loader>
+        <ko-loader params="reverse: true, size: 'large'"></ko-loader>
+        <ko-loader params="reverse: true, size: 'small'"></ko-loader>
+    </div>
+
+    <div class="ko-ui ko-block">
+        <div>
+            <ko-button>Default</ko-button>
+            <ko-button params="type: 'primary'">Primary</ko-button>
+            <ko-button params="type: 'ghost'">Ghost</ko-button>
+            <ko-button params="type: 'dashed'">Dashed</ko-button>
+            <ko-button params="type: 'text'">Text</ko-button>
+            <ko-button params="type: 'success', disable: true">Disable</ko-button>
+            <ko-button params="type: 'primary', size: 'large'">Large</ko-button>
+            <ko-button params="type: 'primary', size: 'small'">Small</ko-button>
+            <ko-button params="type: 'primary', size: 'large', loading: true">Loading</ko-button>
+            <ko-button params="type: 'primary', loading: true">Loading</ko-button>
+            <ko-button params="type: 'success', size: 'small', loading: true">Loading</ko-button>
+            <ko-button params="type: 'success', icon: 'search'">Search</ko-button>
+        </div>
+        <div style="margin-top: 15px;">
+            <ko-button params="type: 'info'">信息按钮</ko-button>
+            <ko-button params="type: 'success'">成功按钮</ko-button>
+            <ko-button params="type: 'warning'">警告按钮</ko-button>
+            <ko-button params="type: 'error'">错误按钮</ko-button>
+        </div>
+        <div style="margin-top: 15px;">
+            <ko-button params="shape: 'circle', icon: 'search'"></ko-button>
+            <ko-button params="shape: 'circle', icon: 'search', size: 'large'"></ko-button>
+            <ko-button params="shape: 'circle', icon: 'search', size: 'small'"></ko-button>
+            <ko-button params="type: 'primary', icon: 'search'">搜索</ko-button>
+            <ko-button params="type: 'primary', shape: 'circle', icon: 'search'">圆角按钮</ko-button>
+        </div>
+        <div style="margin-top: 15px;">
+            <ko-button params="type: 'warning', fluid: true">长按钮</ko-button>
+        </div>
+        <div style="margin-top: 15px;">
+            <ko-button-group>
+                <ko-button params="type: 'primary'">1</ko-button>
+                <ko-button params="type: 'success'">2</ko-button>
+                <ko-button params="type: 'warning'">3</ko-button>
+                <ko-button params="type: 'error'">4</ko-button>
+            </ko-button-group>
+            <ko-button-group params="shape: 'circle'">
+                <ko-button params="icon: 'search'"></ko-button>
+                <ko-button>2</ko-button>
+                <ko-button>3</ko-button>
+                <ko-button>4</ko-button>
+            </ko-button-group>
+            <ko-button-group params="size: 'large', shape: 'circle'">
+                <ko-button params="icon: 'search'">Locked</ko-button>
+                <ko-button>Large</ko-button>
+            </ko-button-group>
+            <ko-button-group params="size: 'small', shape: 'circle'">
+                <ko-button params="icon: 'search'"></ko-button>
+                <ko-button params="icon: 'locked'"></ko-button>
+                <ko-button params="icon: 'toggle'"></ko-button>
+                <ko-button params="icon: 'toggle-filled'"></ko-button>
+            </ko-button-group>
+            <ko-button-group params="vertical: true">
+                <ko-button>1</ko-button>
+                <ko-button>2</ko-button>
+            </ko-button-group>
+        </div>
+    </div>
+
+    <div class="ko-ui ko-block">
+        <ko-row params="gutter: 16">
+            <ko-col params="size: 6">
+                <ko-input params="value: input_value, icon: {left: 'search', right: 'loading'}, label: {left: '搜索'}, labelClick: {left: set_value}, placeholder: '请输入数据'"></ko-input>
+            </ko-col>
+            <ko-col params="size: 6">
+                <ko-input params="value: input_value, size: 'small', icon: {right: 'unlocked'}, label: {right: '密码'}"></ko-input>
+            </ko-col>
+            <ko-col params="size: 6">
+                <ko-input params="value: input_value, size: 'large', icon: {left: 'loading'}"></ko-input>
+            </ko-col>
+            <ko-col params="size: 6">
+                <ko-input params="type: 'password', value: input_value, placeholder: '请输入密码'"></ko-input>
+            </ko-col>
+        </ko-row>
+    </div>
+
+    <!--<div class="ko-ui ko-block">-->
+        <!--<ko-row params="gutter: 16">-->
+            <!--<ko-col params="size: 6">-->
+                <!--<ko-input params="size: 'large', placeholder: 'large input', value: input_value, disable: true"></ko-input>-->
+            <!--</ko-col>-->
+            <!--<ko-col params="size: 6">-->
+                <!--<ko-input params="placeholder: 'default input', value: input_value"></ko-input>-->
+            <!--</ko-col>-->
+            <!--<ko-col params="size: 6">-->
+                <!--<ko-input params="size: 'small', placeholder: 'small input', width: '100px', value: input_value, rightIcon: 'locked'"></ko-input>-->
+            <!--</ko-col>-->
+            <!--<ko-col params="size: 6">-->
+                <!--<ko-input params="type: 'password', placeholder: 'test password', rightIconText: '&#xe81e;', leftIcon: 'unlocked'"></ko-input>-->
+            <!--</ko-col>-->
+        <!--</ko-row>-->
+    <!--</div>-->
+
+    <script type="text/javascript" src="test.js"></script>
+</body>
+</html>

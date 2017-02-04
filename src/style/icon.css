@@ -1,0 +1,51 @@
+.inline-block {
+  display: inline-block;
+  _zoom: 1;
+  *display: inline;
+}
+.ko-icon {
+  display: inline-block;
+  margin-top: 4px;
+  width: 12px;
+  height: 12px;
+  line-height: 12px;
+  text-align: center;
+  font-size: 12px !important;
+  color: #000000;
+}
+.ko-icon.ko-reverse {
+  color: #ffffff;
+}
+.ko-icon.ko-primary {
+  color: #3399ff;
+}
+.ko-icon.ko-light-primary {
+  color: #5cadff;
+}
+.ko-icon.ko-dark-primary {
+  color: #0073e5;
+}
+.ko-icon.ko-info {
+  color: #4da6ff;
+}
+.ko-icon.ko-success {
+  color: #00cc66;
+}
+.ko-icon.ko-warning {
+  color: #ff9900;
+}
+.ko-icon.ko-error {
+  color: #ff6600;
+}
+.ko-icon.ko-small {
+  width: 10px;
+  height: 10px;
+  line-height: 10px;
+  font-size: 10px !important;
+}
+.ko-icon.ko-large {
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  font-size: 16px !important;
+}

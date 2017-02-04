@@ -1,0 +1,107 @@
+.inline-block {
+  display: inline-block;
+  _zoom: 1;
+  *display: inline;
+}
+.ko-input-box {
+  display: block;
+  position: relative;
+  border-radius: 4px;
+  border: 1px solid #b7bdc4;
+  background-color: #fff;
+  background-image: none;
+  transition: border 0.2s ease-in-out, background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+.ko-input-box:hover,
+.ko-input-box.ko-focus {
+  border-color: #3399ff;
+}
+.ko-input-box.ko-focus {
+  box-shadow: 0 0 0 2px rgba(51, 153, 255, 0.2);
+}
+.ko-input-box .ko-input-wrapper {
+  margin: 0;
+  height: 32px;
+}
+.ko-input-box .ko-input-wrapper .ko-input {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 1px;
+  font-size: 12px;
+  color: #657180;
+  background-color: #fff;
+  background-image: none;
+  cursor: text;
+  border: 0 solid;
+  outline: 0;
+}
+.ko-input-box .ko-input-wrapper .ko-input:focus {
+  outline: 0;
+  border: 0 solid;
+}
+.ko-input-box .ko-input-wrapper .ko-input::-ms-clear,
+.ko-input-box .ko-input-wrapper .ko-input::-ms-reveal {
+  display: none;
+}
+.ko-input-box .ko-input-prepend,
+.ko-input-box .ko-input-append {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  text-align: center;
+  padding: 0 8px;
+  height: 32px;
+  line-height: 32px;
+}
+.ko-input-box .ko-input-prepend .ko-loader,
+.ko-input-box .ko-input-append .ko-loader {
+  position: relative;
+  top: 2px;
+}
+.ko-input-box .ko-input-prepend {
+  left: 0;
+}
+.ko-input-box .ko-input-append {
+  right: 0;
+}
+.ko-input-box .ko-label-right,
+.ko-input-box .ko-label-left {
+  color: #657180;
+}
+.ko-input-box .ko-label-right {
+  margin-right: 2px;
+}
+.ko-input-box .ko-label-left {
+  margin-left: 2px;
+}
+.ko-input-box.ko-large .ko-input-wrapper {
+  height: 42px;
+}
+.ko-input-box.ko-large .ko-input-wrapper .ko-input {
+  height: 40px;
+  line-height: 40px;
+}
+.ko-input-box.ko-large .ko-input-prepend,
+.ko-input-box.ko-large .ko-input-append {
+  height: 42px;
+  line-height: 48px;
+}
+.ko-input-box.ko-small .ko-input-wrapper {
+  height: 22px;
+}
+.ko-input-box.ko-small .ko-input-wrapper .ko-input {
+  height: 20px;
+  line-height: 20px;
+}
+.ko-input-box.ko-small .ko-input-prepend,
+.ko-input-box.ko-small .ko-input-append {
+  height: 22px;
+  line-height: 22px;
+}
+.ko-input-box.ko-disable {
+  background: #c3cbd6;
+}
+.ko-input-box.ko-disable .ko-input {
+  background: #c3cbd6;
+}

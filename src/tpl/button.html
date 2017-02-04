@@ -1,0 +1,12 @@
+<a data-bind="attr:{'class': cls, href: href},
+                   event: {mousedown: mouseDown, mouseup: mouseUp, mouseover: mouseOver, mouseout: mouseOut},
+                   click: click, disable: disable()">
+    <!--ko if: loading() && can_use_animate-->
+    <ko-loader params="size: size, reverse: !type()"></ko-loader>
+    <!--/ko-->
+
+    <!--ko if: !loading() && icon()-->
+    <ko-icon params="type: icon, size: size"></ko-icon>
+    <!--/ko-->
+    <span><!--ko template: {nodes: $componentTemplateNodes, data: data}--><!--/ko--></span>
+</a>

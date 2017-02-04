@@ -1,0 +1,34 @@
+.inline-block {
+  display: inline-block;
+  _zoom: 1;
+  *display: inline;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+div {
+  outline: none;
+}
+body {
+  background: #f5f7f9;
+  font-size: 12px;
+  font-family: Consolas, 'Lucida Console', "Microsoft YaHei UI", Menlo, Monaco, "Courier New", monospace;
+}
+.ko-hide {
+  display: none !important;
+}
+.ko-ui.ko-block {
+  border: 1px solid #b7bdc4;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  padding: 20px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 0 #888888;
+  background: #ffffff;
+}
+.ko-ui.ko-block:hover {
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.15);
+  border-color: transparent;
+}
